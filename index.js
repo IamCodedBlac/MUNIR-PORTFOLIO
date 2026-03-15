@@ -39,8 +39,10 @@ function typeText() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dynamicTextElement = document.querySelector("animation span");
-  typeText();
+  const dynamicTextElement = document.querySelector(".animation span");
+  if(dynamicTextElement) {
+    typeText();
+  }
 });
 
 let menuIcon = document.querySelector(`#menu-icon`);
@@ -75,9 +77,3 @@ document.getElementById("menu-icon").addEventListener("click", function () {
   const navbar = document.querySelector(".navbar");
   navbar.classList.toggle("active");
 });
-
-let ageOne = 15;
-if (ageOne < 18) {
-  let ageOutcome = "You are a minor.";
-  console.log(ageOutcome);
-} else console.log("You are an adult.");
